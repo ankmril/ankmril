@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 float result(char chr, float a, float b) {
 
     float rs=0.0;
