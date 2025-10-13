@@ -1,5 +1,7 @@
 use std::io;
 
+// This is just an example program which has been converted from C to Rust which I've done using ChatGPT just to get a beginner's idea of how the language looks like. I had written the code for the C program myself where I used a function named result() to deal with the program's calculations.
+
 fn result(chr: char, a: f64, b: f64) -> f64 {
     if chr == '/' && b == 0.0 {
         println!("Error: Division by zero not allowed.");
