@@ -16,6 +16,7 @@ int main() {
     for(i=0;i<n;i++) {
         if(arr[i]%2==0)
             counte++;
+            
         if(arr[i]%2!=0)
             counto++;
     }
