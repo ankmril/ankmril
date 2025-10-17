@@ -17,10 +17,12 @@ int main() {
 
     for(i=0;i<n;i++) {
         int f=0;
+        
         for(x=1;x<=arr[i];x++) {
             if(arr[i]%x==0)
                 f++;
         }
+
         if(f==2) {
             c++;
             printf("%d\n",arr[i]);
@@ -29,5 +31,6 @@ int main() {
 
     if(c==0)
         printf("There are no prime numbers in the array.\n");
+
     return 0;
 }
