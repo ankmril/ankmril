@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int n,i,j,sm,ss;
-    printf("Enter the size of array:\n");
-    scanf("%d",&n);
+    int r1,c1,r2,c2,i,j,sm,ss,n;
+    printf("Enter the rows and columns of first matrix:\n");
+    scanf("%d%d",&r1,&c1);
+    printf("Enter the rows and columns of second matrix:\n");
+    scanf("%d%d",&r2,&c2);
     printf("Enter the elements of array:\n");
     int arr[n];
     for(i=0;i<n;i++)
