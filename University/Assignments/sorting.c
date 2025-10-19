@@ -16,26 +16,13 @@ int main() {
     printf("Enter the type of sorting (1 for ascending, 2 for descending):\n");
     scanf("%d",&t);
 
-    if(t==1) {
-        for(i=0;i<n;i++) {
-            for(j=i+1;j<n;j++) {
-                if(arr[i]>arr[j]) {
-                    temp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=temp;
-                }
-            }
-        }
-    }
-
-    if(t==2) {
-        for(i = 0; i < n; i++) {
-            for(j = i + 1; j < n; j++) {
-                if(arr[i] < arr[j]) { 
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
+    for (i=0;i<n;i++) {
+        for (j=i+1;j<n;j++) {
+            int condition=(t==1&&arr[i]>arr[j])||(t==2&&arr[i]<arr[j]);
+            if (condition) {
+                temp=arr[i];
+                arr[j]=temp;
+                arr[i]=arr[j];
             }
         }
     }
