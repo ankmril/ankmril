@@ -16,12 +16,12 @@ int main() {
     printf("Enter the position of the element to be deleted:\n");
     scanf("%d",&pos);
 
+    pos--;
+
     if (pos<0||pos>=n) {
         printf("Invalid position.\n");
         return 0;
     }
-
-    pos--;
 
     for(i=pos;i<n-1;i++)
         arr[i]=arr[i+1];
