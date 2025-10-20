@@ -25,8 +25,12 @@ fn main() {
         println!("Enter both numbers:");
 
         let mut input1 = String::new();
-        io::stdin().read_line(&mut input1).unwrap();
-        let a: f64 = match input1.trim().parse() {
+        io::stdin()
+            .read_line(&mut input1)
+            .unwrap();
+        let a: f64 = match input1
+            .trim()
+            .parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid number, try again.");
@@ -35,8 +39,12 @@ fn main() {
         };
 
         let mut input2 = String::new();
-        io::stdin().read_line(&mut input2).unwrap();
-        let b: f64 = match input2.trim().parse() {
+        io::stdin()
+            .read_line(&mut input2)
+            .unwrap();
+        let b: f64 = match input2
+            .trim()
+            .parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid number, try again.");
@@ -46,8 +54,13 @@ fn main() {
 
         println!("Enter the operation (+, -, *, /):");
         let mut op = String::new();
-        io::stdin().read_line(&mut op).unwrap();
-        let chr = match op.trim().chars().next() {
+        io::stdin()
+            .read_line(&mut op)
+            .unwrap();
+        let chr = match op
+            .trim()
+            .chars()
+            .next() {
             Some(c) => c,
             None => {
                 println!("No operation entered, try again.");
@@ -59,8 +72,12 @@ fn main() {
 
         println!("Do you want to make another operation? (Enter 1 for yes and 2 for no):");
         let mut cont = String::new();
-        io::stdin().read_line(&mut cont).unwrap();
-        let c: i32 = match cont.trim().parse() {
+        io::stdin()
+            .read_line(&mut cont)
+            .unwrap();
+        let c: i32 = match cont
+            .trim()
+            .parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Invalid input, continuing...");
