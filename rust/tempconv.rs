@@ -4,8 +4,8 @@ use std::io;
 
 fn main() {
 
-    let mut choice = String::new();
-    let temp = String::new();
+    let mut choice = String::new(); // trim and parse here itself so mut
+    let temp = String::new(); // not mut cause doesn't update here but instead in helper function
 
     println!("enter 1 for celsius to fahrenheit and 2 for fahrenheit to celsius:");
 
@@ -13,22 +13,23 @@ fn main() {
       .read_line(&mut choice)
       .expect("could not read line.");
 
-    let choice: i8 = match choice
+    let choice: i8 = match choice // used match for error handling
       .trim()
       .parse() {
+        // syntax for match
         Ok(num) => num,
         Err(_) => {
             println!("please enter a valid number.");
             return;
         }
     };
-
+    
     if choice == 1 {
         println!("enter temp in celsius:");
 
-        let temp_value = read_temp(temp);
+        let temp_value = read_temp(temp); // helper function called for input
 
-        println!("result of conversion: {}", cl(temp_value));
+        println!("result of conversion: {}", cl(temp_value)); // helper function called for conversion
     }
     else if choice == 2 {
         println!("enter temp in fahrenheit:");
@@ -54,7 +55,7 @@ fn fr(t: f32) -> f32 {
 
 }
 
-fn read_temp(mut prompt: String) -> f32 {
+fn read_temp(mut prompt: String) -> f32 { // String prompt and f32 return
 
     io::stdin()
       .read_line(&mut prompt)
@@ -70,5 +71,5 @@ fn read_temp(mut prompt: String) -> f32 {
         }
     };
 
-    prompt
+    prompt // return
 }
