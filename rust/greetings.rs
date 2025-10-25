@@ -1,4 +1,4 @@
-use std::io;
+use std::io; // for inputs
 
 fn main() {
     let mut name: String = String::new(); // initialize input
