@@ -3,7 +3,6 @@
 use std::io;
 
 fn main() {
-
     let mut choice = String::new(); // trim and parse here itself so mut
     let temp = String::new(); // not mut cause doesn't update here but instead in helper function
 
