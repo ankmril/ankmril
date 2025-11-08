@@ -4,11 +4,11 @@
 int main() {
   int number, choice;
 
-  printf("\nEnter a number:\n");
-  scanf(" %d", &number);
-
   printf("\nEnter type of conversion (1 for decimal to binary & 2 for binary to decimal):\n");
   scanf(" %d", &choice);
+
+  printf("\nEnter a number:\n");
+  scanf(" %d", &number);
 
   switch(choice) {
     case 1:
