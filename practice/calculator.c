@@ -4,7 +4,7 @@ float result(char chr, float a, float b) {
   float rs=0.0;
 
   if(chr=='/'&&b==0) {
-    printf("Error: Division by zero not allowed.\n");
+    printf("\nError: Division by zero not allowed.\n");
     return 0.0;
   }
 
@@ -36,13 +36,15 @@ int main() {
 
     printf("Do you want to perform another operation? (Enter 1 for yes and 2 for no.)\n");
     scanf("%d",&c);
-    
-    if(c!=1&&c!=2)
+
+    if(c!=1&&c!=2) {
       printf("Invalid input.\n");
+    }
   } while(c==1);
 
-  if(c==2)
+  if(c==2) {
     printf("Thanks for using the calculator.\n");
+  }
         
   return 0;
 }
