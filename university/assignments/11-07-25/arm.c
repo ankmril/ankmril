@@ -7,11 +7,21 @@ int main() {
   printf("\nEnter a number:\n");
   scanf(" %d", &num);
 
+  int check = num; // to check when counting digits
+
   int dup = num; // to check later in condition
+
+  int count;
+  count = 0;
+
+  while(check > 0) {
+    count++;
+    check = check / 10;
+  }
 
   while(num > 0) {
     dig = num % 10;
-    sum += pow(dig, 3); // digit cube sum equals original for armstrong number
+    sum += pow(dig, count); // digit power digit count sum equals original for armstrong number
     num = num / 10;
   }
 
