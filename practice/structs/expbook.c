@@ -20,17 +20,28 @@ Book* findMostExpensive(Book *b, int size) {
 }
 
 int main() {
-  Book books[3];
+  int n;
+
+  printf("\nEnter the number of books:\n");
+  scanf(" %d", &n);
+  getchar();
+
+  Book books[n];
   
-  strcpy(books[0].title, "Atomic Habits");
-  strcpy(books[1].title, "Uzumaki");
-  strcpy(books[2].title, "Bakemonogatari");
+  printf("\nEnter the title and price of the books:\n");
 
-  books[0].price = 450;
-  books[1].price = 700;
-  books[2].price = 900;
+  for(int i = 0; i < n; i++) {
+    printf("Book %d title: ", i+1);
+    fgets(books[i].title, sizeof(books[i].title), stdin);
+    
+    books[i].title[strcspn(books[i].title, "\n")] = 0; 
 
-  Book *mostExpensiveBook = findMostExpensive(books, 3);
+    printf("Book %d price: ", i+1); 
+    scanf(" %f", &books[i].price);
+    getchar();
+  }
+
+  Book *mostExpensiveBook = findMostExpensive(books, n);
 
   printf("\nResult:\n");
   printf("The most expensive book is \"%s\".\n", mostExpensiveBook->title);
