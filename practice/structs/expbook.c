@@ -11,7 +11,8 @@ Book* findMostExpensive(Book *b, int size) {
   Book *winner = &b[0];
 
   for(int i = 1; i < size; i++) {
-    if (b[i].price > winner->price) {
+    if (b[i].price
+       > winner->price) {
       winner = &b[i];
     } 
   }
