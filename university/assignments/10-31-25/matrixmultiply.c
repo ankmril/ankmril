@@ -6,7 +6,7 @@ int main() {
   printf("enter the size of 1st matrix:\n");
   scanf(" %d%d", &r1, &c1);
 
-  printf("enter the size of 2nd array:\n");
+  printf("enter the size of 2nd matrix:\n");
   scanf(" %d%d", &r2, &c2);
 
   if(c1 != r2) {
